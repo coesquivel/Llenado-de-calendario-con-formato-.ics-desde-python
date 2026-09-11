@@ -14,6 +14,10 @@ def repetir_o_no(INPUT): # Para clases, no eventos
         
         partes = [p.strip() for p in linea.split('|')]
 
+        if len(partes) == 3:
+            print(f'Pequeña advertencia :D\n"{linea}" es un evento, recuerda que no puede combinarse con un tipo clase')
+            return INPUT
+
         if "RepX" not in partes[0]: continue
 
         #Extraemos el número de repeticiones
